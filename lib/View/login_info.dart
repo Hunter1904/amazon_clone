@@ -1,6 +1,7 @@
 import 'package:amazon_clone/View/create_ac.dart';
 import 'package:amazon_clone/View/home_screen.dart';
 import 'package:amazon_clone/View/sign_in.dart';
+import 'package:amazon_clone/utils/bottom_nav_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -92,7 +93,7 @@ class LoginInfo extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child:
                 InkWell(onTap: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context) => HomeScreen()));
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => BottomNavBar()));
                 },
                   child: Container(padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width/4,vertical: 20),decoration:BoxDecoration(color: Colors.orange.shade200 ,  border: Border.all(
                     color: Colors.black, // Border color
