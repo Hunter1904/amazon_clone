@@ -1,5 +1,4 @@
 import 'package:amazon_clone/View/create_ac.dart';
-import 'package:amazon_clone/View/home_screen.dart';
 import 'package:amazon_clone/View/sign_in.dart';
 import 'package:amazon_clone/utils/bottom_nav_bar.dart';
 import 'package:flutter/cupertino.dart';

@@ -120,7 +120,7 @@ class SignIn extends StatelessWidget{
                ),
                Padding(
                  padding: const EdgeInsets.all(30.0),
-                 child: InkWell(onTap: () => signInSubmit() ,
+                 child: InkWell(onTap: () => signInSubmit(),
                    child: Container(padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width/4,vertical: 20),decoration:BoxDecoration(color: Colors.orange.shade200 ,  border: Border.all(
                      color: Colors.black, // Border color
                      width: 2, // Border width

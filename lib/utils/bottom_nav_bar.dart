@@ -1,5 +1,4 @@
 import "package:amazon_clone/View/home_screen.dart";
-import "package:amazon_clone/View/login_info.dart";
 import "package:amazon_clone/View/sign_in.dart";
 import "package:flutter/material.dart";
 
