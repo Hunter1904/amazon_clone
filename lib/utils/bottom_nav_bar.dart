@@ -1,4 +1,5 @@
 import "package:amazon_clone/View/home_screen.dart";
+import "package:amazon_clone/View/profileScreen.dart";
 import "package:amazon_clone/View/sign_in.dart";
 import "package:flutter/material.dart";
 
@@ -15,7 +16,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   List<Widget> screens = [
       HomeScreen(),
-      SignIn(),
+      ProfileScreen(),
   ];
 
   updateScreen(int index){
