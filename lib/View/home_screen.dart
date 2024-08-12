@@ -1,3 +1,4 @@
+import 'package:amazon_clone/View/Top_Category/deal.dart';
 import 'package:amazon_clone/utils/circle_avatar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static const List<String> carouselImages = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8MVWVKYFxhsE_P9ukktqoPSCgt7qZ4fYrcg&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWjZ-6BdTya9CXslHzasdZgcNRGX5WTQwh3A&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9YQ-XOZxnZ8uH0qnG9_1iYs61Yxko6AuGWg&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWjZ-6BdTya9CXslHzasdZgcNRGX5WTQwh3A&s"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSUi_vfvKJuk731himUoN-SibKHAhXe86J9A&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XF4eaZc6SbvWZwKzjeUry2yNWG2qBp82IQ&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC5CR31pPugvEMv1gNnmMDxKpSa5fyXIVxAg&s"
   ];
 
   var searchText = TextEditingController();
@@ -46,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Expanded(
                 child: Container(
                   height: 42,
-                  margin: const EdgeInsets.only(left: 15),
+                  margin: const EdgeInsets.only(left: 5),
                   child: Material(
                     borderRadius: BorderRadius.circular(7),
                     elevation: 1,
@@ -97,6 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
+            automaticallyImplyLeading: false,
         ),
       ),
       body: Container(
@@ -154,10 +156,56 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: List.generate(8, (index) => Circle_Avatar(
+                      children: [ Circle_Avatar(
+                        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4F6f4WZJvdMQODuixwk7g643PqWUJet1WzQ&s",
+                        productName: "Deals",
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Deal()));
+                        },
+                      ),
+                        Circle_Avatar(
                         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9YQ-XOZxnZ8uH0qnG9_1iYs61Yxko6AuGWg&s",
                         productName: "Mobiles",
-                      )),
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Deal()));
+                        },
+                      ),
+                        Circle_Avatar(
+                        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj_cZqXxf__rfB4QP9TTsS1e8UOEKSMDD2ag&s",
+                        productName: "Electronics",
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Deal()));
+                        },
+                      ),
+                        Circle_Avatar(
+                        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUU14ezdPLFQOjyLQiu6JBTqJrDIUlxemyLA&s",
+                        productName: "Fashion",
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Deal()));
+                        },
+                      ),
+                        Circle_Avatar(
+                        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKf30MLxNQDLbuA_7iFvskxiyB_RhVhI4S7Q&s",
+                        productName: "Home",
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Deal()));
+                        },
+                      ),
+                        Circle_Avatar(
+                        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeEn8GOFDRqBsTDXO-v1cLaHem-j7r0OnGnw&s",
+                        productName: "Beauty",
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Deal()));
+                        },
+                      ),
+                        Circle_Avatar(
+                        imageUrl: "https://assets.aboutamazon.com/dims4/default/d573e3b/2147483647/strip/false/crop/1320x743+0+0/resize/1320x743!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F92%2F06%2Fbb204a6842a49e7bdc66523a070c%2Fblog2.jpg",
+                        productName: "Grocery",
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Deal()));
+                        },
+                      )
+                      ],
                     ),
                   ),
                 ),
@@ -174,7 +222,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 }).toList(),
                 options: CarouselOptions(
                   viewportFraction: 1,
-                  height: screenSize.height * 0.25,
+                  height: screenSize.height * 0.30,
                 ),
               ),
               Padding(

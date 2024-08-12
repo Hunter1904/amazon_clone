@@ -30,7 +30,7 @@ class ProfileScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 10.0),
                 child: Image.asset(
                   'assets/images/am_logo.png',
-                  height: 50,
+                  height: 90,
                 ),
               ),
               Spacer(),
@@ -45,6 +45,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ],
           ),
+            automaticallyImplyLeading: false,
         ),
       ),
       body: SingleChildScrollView(

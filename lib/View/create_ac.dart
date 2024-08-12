@@ -194,7 +194,7 @@ class CreateAc extends StatelessWidget {
                       onTap: () => signUpSubmit(),
                       child: Container(
                         padding: EdgeInsets.symmetric(
-                          horizontal: screenSize.width * 0.25,
+                          horizontal: screenSize.width * 0.20,
                           vertical: screenSize.height * 0.02,
                         ),
                         decoration: BoxDecoration(

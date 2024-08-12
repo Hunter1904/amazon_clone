@@ -1,6 +1,5 @@
 import "package:amazon_clone/View/home_screen.dart";
 import "package:amazon_clone/View/profileScreen.dart";
-import "package:amazon_clone/View/sign_in.dart";
 import "package:flutter/material.dart";
 
 class BottomNavBar extends StatefulWidget {
@@ -30,6 +29,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       body: screens[screen_index],
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: screen_index,
         selectedItemColor: Colors.blueGrey,
         unselectedItemColor : Colors.black,
         onTap: updateScreen,
@@ -37,6 +37,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home ,color: screen_index == 0 ? Colors.blueGrey : Colors.black  ,) , label: ""),
           BottomNavigationBarItem(icon: Icon(Icons.person, color: screen_index == 1 ? Colors.blueGrey : Colors.black ), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart, color: screen_index == 2 ? Colors.blueGrey : Colors.black ), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.menu, color: screen_index == 3 ? Colors.blueGrey : Colors.black ), label: ""),
         ],
       ),
     );
